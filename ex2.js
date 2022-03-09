@@ -15,3 +15,4 @@ let persona = {
 
  // No modificar a partir de aqui
  console.log(persona.apellidos)
+ 
