@@ -2,10 +2,9 @@
  * Buscando a Nemo
  */
 
-let pez1 = {
+ let pez1 = {
     nombre: "Dory",
     color: 'azul'
-
 }
 
 let pez2 = {
@@ -34,15 +33,21 @@ function buscarPez(banco_peces, pezBuscado) {
     let pezEncontrado = false
     let indicePez = 0
 
-    while(!pezEncontrado && indicePez<=banco_peces.length){
-        
+    while (!pezEncontrado && indicePez < banco_peces.length) {
+        console.log("posición del array actual: ", indicePez);
+        console.log("pez actual:", banco_peces[indicePez]);
+
+        // Comprobar si la propiedad del objeto actual es igual al pezBuscado
+        pezEncontrado = banco_peces[indicePez].nombre == pezBuscado;
+
+        indicePez++;
     }
 
     return pezEncontrado;
 }
 
 // Esta llamada debería devolver 'true'
-// console.log(buscarPez(banco_peces, 'Nemo')); 
+// console.log("He encontrado a Nemo?", buscarPez(banco_peces, 'Nemo'));
 
 // Esta llamada debería devolver 'true'
 // console.log(buscarPez(banco_peces, 'Sipho'));
